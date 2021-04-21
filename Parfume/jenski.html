@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Parfume</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/shop-homepage.css" rel="stylesheet">
+  <link rel="stylesheet" href="modalContent.css">
+  <link rel="icon" href="./img/logo.jpg" type="image/icon type">
+
+  <!-- JS -->
+  <script src="action.js"></script>
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="header">
+    <div class="container">
+      <a class="navbar-brand" href="/index.html">PARFUME</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" style="text-transform:uppercase;letter-spacing:1px" href="/index.html">Начало
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="text-transform:uppercase;letter-spacing:1px" href="/mujki.html">Мъжки парфюми</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="text-transform:uppercase;letter-spacing:1px" href="/jenski.html">Женски парфюми</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="text-transform:uppercase;letter-spacing:1px" href="/komplekti.html">Одеколони</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="text-transform:uppercase;letter-spacing:1px" href="/contacts.html">Контакти</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<!-- NOTIFICATION -->
+<div class="notification infoBox">
+  Успешно поръчан!
+</div>
+<!-- Details -->
+<div class="detailsContainer" style="display: block;">
+  <div style="margin-top:3%; margin-bottom: 5%; display: none;"
+    class="mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden"  id="details">
+    <button class="close" onclick="Close(event);">X</button>
+  <!-- PURCHASE DETAILS -->
+    <form id="contactForm" name="sentMessage" novalidate="novalidate" style="display: none;">
+      <div class="shadow-sm mx-auto"
+      style="border: 1px solid gray; width: 80%; height: auto; border-radius: 21px 21px 0 0;">
+      <img src="" style="display: block; margin: 0 auto" id="productImage"/>
+    </div>
+      <div class="row align-items-stretch mb-5">
+          <div class="col-md-6">
+              <div class="form-group">
+                  <input class="form-control" id="name" type="text" placeholder="Вашите имена*" required="required"/>
+                  <p class="help-block text-danger"></p>
+              </div>
+              <div class="form-group">
+                  <input class="form-control" id="email" type="email" placeholder="Вашият email*" required="required"/>
+                  <p class="help-block text-danger"></p>
+              </div>
+              <div class="form-group mb-md-0">
+                  <input class="form-control" id="phone" type="tel" placeholder="Вашият телефонен номер*" required="required"/>
+                  <p class="help-block text-danger"></p>
+              </div>
+          </div>
+          <div class="col-md-6">
+              <div class="form-group form-group-textarea mb-md-0">
+                  <textarea class="form-control" id="message" placeholder="Адрес за доставка*" required="required"></textarea>
+                  <p class="help-block text-danger"></p>
+              </div>
+          </div>
+      </div>
+      <div class="text-center">
+          <div id="success"></div>
+          <button  onclick="Alert(event)" class="btn btn-primary btn-xl text-uppercase" id="purchaseButton" type="submit">Купи</a></button>
+          <button class="btn btn-primary btn-xl text-uppercase" id="cancelButton" type="submit"><a href="/jenski.html">Откажи</a></button>
+      </div>
+  </form>
+  <!-- PRODUCT DETAILS -->
+    <div class="contains" id="productDetails">
+    <h2 class="display-5" id="detailsName"></h2>
+    <div class="shadow-sm mx-auto"
+      style="border: 1px solid gray; width: 50%; height: auto; border-radius: 21px 21px 0 0;">
+      <img src="" style="display: block; margin: 0 auto" id="detailsImage" />
+    </div>
+    <div class="container">
+      <label for=""></label>
+      <p class="text-dark" id="detailsDescription">
+        <span>Начин на употреба:</span>
+        <br>
+      <p>Нанесете аромата в зоните на пулса - китките, шията, гърдите, лактите и сгъвката зад коленете.</p>
+      <br>
+      <hr>
+      <span>Състав:</span>
+      <br>
+      <br>
+      <p>INGREDIENTS : ALCOHOL, PARFUM (FRAGRANCE), AQUA (WATER), DIPROPYLENE GLYCOL, LINALOOL, LIMONENE, ETHYLHEXYL
+        METHOXYCINNAMATE, DIETHYLAMINO HYDROXYBENZOYL HEXYL BENZOATE, ALPHA-ISOMETHYL IONONE, CITRONELLOL, BENZYL
+        SALICYLATE,
+        EUGENOL, CITRAL, GERANIOL, FARNESOL, CINNAMAL, CI 17200 (RED 33), CI 42090 (BLUE 1), BHT, CI 60730 (EXT. VIOLET
+        2), CI
+        19140 (YELLOW 5</p>
+      </p>
+      <br>
+      <p class="text-dark font-weight-bold" id="detailsPrice"></p>
+    </div>
+    </div>
+  </div>
+</div> 
+  <!-- Page Content -->
+  <div class="container" id="pageContent">
+
+    <div class="row">
+
+      <div class="col-lg-3">
+
+        <h1 class="my-4">Neshto</h1>
+        <div class="list-group">
+          <a href="#1vi" class="list-group-item">Нова колекция </a>
+          <a href="#2ri" class="list-group-item">Намалени</a>
+          <a href="#3ti" class="list-group-item">Стара колекция</a>
+        </div>
+
+      </div>
+      <!-- /.col-lg-3 -->
+
+      <div class="col-lg-9">
+
+        <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 mb-4" id="1vi">
+            <div class="card h-100">
+              <a href="#"><img class="card-img-top" src="./img/LancomeIDOLE.jpg" id="image"  alt=""></a>
+              <div class="card-body" onclick="Details(event)">
+                <h4 class="card-title">
+                  <a href="">LANCOME IDOLE L'INTENSE</a>
+                </h4>
+                <h5 id="price">129.90лв</h5>
+                <p class="card-text">Lancome Idole L'Intense е опияняващ и пристрастяващ дамски парфюм, лансиран, като по-смел и дързък последовател на класическия Lancome Idole Eau de Parfum.</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                <button class="float-right" onclick="Purchase(event)">Купи</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <a href="#"><img class="card-img-top" src="./img/parfium5.png" alt="" id="image"></a>
+              <div class="card-body" onclick="Details(event)">
+                <h4 class="card-title">
+                  <a href="">GUERLAIN Mon Guerlain</a>
+                </h4>
+                <h5 id="price">130.60лв</h5>
+                <p class="card-text">Тази парфюмна вода ще ви даде усещане за уникалност и ще направи така, че хората да се обръщат след вас.</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                <button class="float-right" onclick="Purchase(event)">Купи</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <a href="#"><img class="card-img-top" src="./img/MA VIE.jpg" alt="" id="image"></a>
+              <div class="card-body" onclick="Details(event)">
+                <h4 class="card-title">
+                  <a href="#">HUGO BOSS BOSS MA VIE</a>
+                </h4>
+                <h5 id="price">90.40лв</h5>
+                <p class="card-text">Парфюмната вода Boss Ma Vie на марката Hugo Boss е вдъхновена от крехкостта на женската душа. Опитайте и вие очарователната композиция, която слави женската красота и уникалност.</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                <button class="float-right" onclick="Purchase(event)">Купи</button>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-lg-4 col-md-6 mb-4" id="2ri">
+            <div class="card h-100">
+              <a href="#"><img class="card-img-top" src="./img/GOODGirl.jpg" alt="" id="image"></a>
+              <div class="card-body" onclick="Details(event)">
+                <h4 class="card-title">
+                  <a href="#">CAROLINA GOOD GIRL</a>
+                </h4>
+                <h5 id="price">90.40лв</h5>
+                <p class="card-text">Good Girl от Carolina Herrera е мистериозен дамски парфюм от групата на ориенталско-цветните аромати. Въплъщава в себе си нова, вълнуваща комбинация от нотки на тубероза и зърна тонка, като по този начин изразява двойствеността на женската природа.</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                <button class="float-right" onclick="Purchase(event)">Купи</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4" >
+            <div class="card h-100">
+              <a href="#"><img class="card-img-top" src="./img/WOMANITY.jpg" alt="" id="image"></a>
+              <div class="card-body" onclick="Details(event)">
+                <h4 class="card-title">
+                  <a href="#">MUGLER WOMANITY</a>
+                </h4>
+                <h5 id="price">128.40лв</h5>
+                <p class="card-text">Топла, пронизваща, сладка, свежа и упоителна. Такава е парфюмната вода Mugler Womanity. Аромат, който открива всички аспекти на женствеността и възхвалява жените по цялото земно кълбо.</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                <button class="float-right" onclick="Purchase(event)">Купи</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <a href="#"><img class="card-img-top" src="./img/euphoria.jpg" alt="" id="image"></a>
+              <div class="card-body" onclick="Details(event)">
+                <h4 class="card-title">
+                  <a href="#">CALVIN KLEIN EUPHORIA</a>
+                </h4>
+                <h5 id="price">68.00лв</h5>
+                <p class="card-text">Нямате нужда от шоколад, нито от любовно признание, за да изживеете еуфория от чувства. Парфюмната вода Calvin Klein Euphoria ще ви представи загадъчен свят, пълен с неукротима природа и екзотични цветя, които ще ви дадат чувствена съблазнителност и концентрирано усещане за щастие.</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                <button class="float-right" onclick="Purchase(event)">Купи</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6 mb-4" id="3ti">
+            <div class="card h-100">
+              <a href="#"><img class="card-img-top" src="./img/wish.jpg" alt="" id="image"></a>
+              <div class="card-body" onclick="Details(event)">
+                <h4 class="card-title">
+                  <a href="#">CHOPARD WISH</a>
+                </h4>
+                <h5 id="price">45.80лв</h5>
+                <p class="card-text"> Бъдете съвършена като най-редкия диамант. Дамската парфюмна вода Chopard Wish ще ви даде усещане за елегантност, чувственост и тайнственост.</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                <button class="float-right" onclick="Purchase(event)">Купи</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <a href="#"><img class="card-img-top" src="./img/SATINE.jpg" alt="" id="image"></a>
+              <div class="card-body" onclick="Details(event)">
+                <h4 class="card-title">
+                  <a href="#">LALIQUE SATUNE</a>
+                </h4>
+                <h5 id="price">105.00лв</h5>
+                <p class="card-text">Нека красотата ви да се върти в ритъма на танца като съблазнителна танцьорка. Нежност и чувственост крие дамската парфюмна вода Lalique Satine.</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                <button class="float-right" onclick="Purchase(event)">Купи</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <a href="#"><img class="card-img-top" src="./img/CRYSTAL.jpg" alt="" id="image"></a>
+              <div class="card-body" onclick="Details(event)">
+                <h4 class="card-title">
+                  <a href="#">SWISS ARABIAN CRYSTAL ROSEL</a>
+                </h4>
+                <h5 id="price">41.40лв</h5>
+                <p class="card-text">Парфюмната вода Swiss Arabian Crystal Rose е много чувствен и пристрастяващ аромат, който ще обикнете както вие, така и вашето обкръжение!</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                <button class="float-right" onclick="Purchase(event)">Купи</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- /.row -->
+
+      </div>
+      <!-- /.col-lg-9 -->
+
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark" id="footer">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Parfume 2020</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
